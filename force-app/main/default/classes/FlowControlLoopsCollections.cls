@@ -113,6 +113,15 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Even" or "Odd", or null if the number is null.
      */
     public static String checkEvenOdd(Integer a) {
+        if (a == null) {
+            return null;
+        }
+        else if(Math.mod(a, 2) == 0){
+            return 'Even';
+        }
+        else if (Math.mod(a,2) != 0) {
+            return 'Odd';
+        }
         return null; // Replace null with the variable you used to store the result
     }
 
@@ -124,7 +133,13 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the input is "Empty", "Null", or "Contains Text".
      */
     public static String checkString(String a) {
-        return null; // Replace null with the variable you used to store the result
+        if (a == null) {
+            return 'Null';
+            }
+        else if (a == '') {
+            return 'Empty';
+        }
+        return 'Contains Text'; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -140,7 +155,19 @@ public with sharing class FlowControlLoopsCollections {
      * @return The grade for the given score.
      */
     public static String determineGrade(Integer score) {
-        return null; // Replace null with the variable you used to store the result
+        if (score >= 90) {
+            return 'A';
+        }
+        else if (score >= 80) {
+            return 'B';
+        }
+        else if (score >= 70) {
+            return 'C';
+        }
+        else if (score >= 60) {
+            return 'D';
+        }
+        return 'F'; // Replace null with the variable you used to store the result
     }
 
 
@@ -152,13 +179,11 @@ public with sharing class FlowControlLoopsCollections {
      * @return The sum of all integers up to the limit.
      */
     public static Integer sumUpToLimit(Integer intLimit) {
-        /* 
-         for (){
-            
-         }
-        */
-
-        return null; // Replace null with the variable you used to store the result
+        Integer sum = 0;
+        for (Integer i = 0; i <= intLimit; i++) {
+            sum += i;
+        }
+            return sum;
     }
 
     /**
